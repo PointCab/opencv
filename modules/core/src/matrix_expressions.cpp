@@ -990,7 +990,12 @@ MatExpr operator <= (double s, const Mat& a)
     return e;
 }
 
-MatExpr operator == (const Mat& a, const Mat& b)
+bool operator == (const Mat& a, const Mat& b)
+{
+	return a.data == b.data;	
+}
+
+MatExpr equals(const Mat& a, const Mat& b)
 {
     checkOperandsExist(a, b);
     MatExpr e;
