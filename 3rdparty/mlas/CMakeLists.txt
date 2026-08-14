@@ -16,6 +16,10 @@
 #     ReduceMaximumF32Kernel / ComputeSumExpF32Kernel initialized to the
 #     portable compute.cpp fallbacks.
 
+if(POLICY CMP0091)
+  cmake_policy(SET CMP0091 OLD)
+endif()
+
 set(MLAS_SRC_DIR ${CMAKE_CURRENT_SOURCE_DIR}/lib)
 set(MLAS_INC_DIR ${CMAKE_CURRENT_SOURCE_DIR}/inc)
 
